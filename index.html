@@ -1,35 +1,70 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Your Page Title</title>
+    <title>LifeSpan Calculator: Maximize Your Time</title>
+    <style>
+      body {
+        font-family: "Arial, sans-serif";
+        background-color: #f4f4f4;
+        color: #333;
+        text-align: center;
+        padding: 50px;
+      }
+      h1 {
+        font-size: 3em;
+        color: #4caf50;
+      }
+      h2 {
+        font-size: 1.5em;
+        color: #555;
+        margin-bottom: 20px;
+      }
+      .quote {
+        font-style: italic;
+        color: #888;
+        margin: 30px 0;
+      }
+      .result {
+        font-size: 2em;
+        color: #d9534f;
+        margin: 40px 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+    </style>
   </head>
   <body>
-  <p>  calculated your age   </p>
-    <h1></h1>
-    <!-- Your HTML content goes here --> 
+    <div class="container">
+      <h1>LifeSpan Calculator</h1>
+      <h2>Your Remaining Years at a Glance</h2>
+      <p class="quote">"Age is just a number. How you live is what counts."</p>
+      <p class="year"></p>
+      <p class="result"></p>
+    </div>
+
     <!-- Add your script here -->
-    <script src"script.js"> </script>
-    <script >
+    <script src=""></script>
+    <script>
       console.log("hello");
-      let age = prompt("write your curent ");
+      let age = prompt("Write your current age:");
       function lifeInWeeks(age) {
         /************Don't change the code above************/
-
-        //Write your code here.
-
         let inyear = 90 - age;
-
         let x = inyear * 365;
-
         let y = inyear * 52;
-
         let z = inyear * 12;
 
         return `You have ${x} days, ${y} weeks, and ${z} months left.`;
-
         /*************Don't change the code below**********/
       }
-      document.getElementsByTagName("h1")[0].innerHTML = lifeInWeeks(age);
+      document.getElementsByClassName("year")[0].innerHTML = `You have ${90 - age} years left.`;
+      document.getElementsByClassName("result")[0].innerHTML = lifeInWeeks(age);
     </script>
   </body>
 </html>
