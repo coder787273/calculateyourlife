@@ -56,11 +56,12 @@
       function lifeInWeeks(age) {
         /************Don't change the code above************/
         let inyear = 90 - age;
+        let s = inyear *31536000;
         let x = inyear * 365;
         let y = inyear * 52;
         let z = inyear * 12;
-
-        return `You have ${x} days, ${y} weeks, and ${z} months left.`;
+        
+        return `You have ${s} seconds,  ${x} days, ${y} weeks, and ${z} months left.`;
         /*************Don't change the code below**********/
       }
       document.getElementsByClassName("year")[0].innerHTML = `You have ${90 - age} years left.`;
